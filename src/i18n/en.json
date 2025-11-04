@@ -1,0 +1,10 @@
+{
+    "header": "SquareGPS Test Task",
+    "pages": {
+        "about": "About",
+        "map": "Map"
+    },
+    "about": {
+        "text": "<p>You need to build an application using Vue.js, Vuex, Vue Router, and Vuetify. The application header should contain a menu with two items: “About” and “Map”. The main section of the application should display the content of these sections.</p> <h2>“About” Section</h2> <p>This section should contain the text of this assignment, styled in a similar way.</p> <h2>“Map” Section</h2> <p>This section should display a map and a list (see example):</p> <ol> <li>1. When clicking the “Add” button, the map should switch to marker-adding mode: clicking on the map should place a marker at that location, and a corresponding entry with the address should appear in the list. <ol> <li>a. To find the address, you may use any free geocoding API, for example: <a href=\"https://geocode.maps.co/\" target=\"_blank\">https://geocode.maps.co/</a>.</li> <li>b. If the address cannot be found, an error should be displayed and the marker should not be added to the list.</li> </ol> </li> <li>2. When clicking a marker on the map, the corresponding entry in the list should be highlighted.</li> <li>3. When clicking an entry in the list, the map should center on the corresponding marker.</li> <li>4. Markers should be stored locally and must persist after the page is reloaded.</li> <li>5. The browser’s address bar should display the ID of the selected marker. Local data storage should be implemented via a service that emulates a backend. (You need a Backend class that pseudo-asynchronously saves data in localStorage.)</li> </ol> <h3>Additionally:</h3> <ol> <li>1. Consider the display on mobile devices.</li> <li>2. Provide localization support.</li> <li>3. Write one unit test for any component using Jest.</li> </ol> <h3>Reminder:</h3> <p>This test assignment is intended to demonstrate your ability to write well-structured modular code and effectively use the listed technologies (and more). You should be proud of this code.</p>"
+    }
+}
