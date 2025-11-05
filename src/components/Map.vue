@@ -21,19 +21,19 @@ const { placeMarker, focus } = useLeafletMap({
 
         isLoading.value = true
 
-        const data = await geocode(lat, lng)
-        if (data.error) {
-            isUnableToDecode.value = true
-            isLoading.value = false
-        } else {
-            const name = data.display_name
+        try {
+            const name = await geocode(lat, lng)
+            
             const address = { lat, lng, name }
             const saved = await store.dispatch('createAddress', address)
-            isLoading.value = false
-            placeMarker(saved)
-        }
 
-        isAddingMode.value = false
+            placeMarker(saved)
+        } catch (e) {
+            isUnableToDecode.value = true
+        } finally {
+            isLoading.value = false
+            isAddingMode.value = false
+        }
     },
     onSelect: (id) => {
         selectedAddressId.value = id
