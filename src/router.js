@@ -9,7 +9,9 @@ const routes = [
     { name: 'NotFound', path: '/:pathMatch(.*)*', component: NotFound },
 ]
 
+const baseURL = import.meta.env.VITE_BASE_URL
+
 export const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory(baseURL),
     routes,
 })
